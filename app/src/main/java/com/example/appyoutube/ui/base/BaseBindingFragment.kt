@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import com.example.appyoutube.ui.MainActivity
 import com.example.appyoutube.ui.MainVM
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.coroutines.Dispatchers
@@ -51,7 +52,7 @@ abstract class BaseBindingFragment<B : ViewDataBinding, T : BaseViewModel> : Bas
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
+        mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
         viewModel = ViewModelProvider(this)[getViewModel()]
     }
 
@@ -71,13 +72,13 @@ abstract class BaseBindingFragment<B : ViewDataBinding, T : BaseViewModel> : Bas
         return BottomSheetBehavior.from<View>(view)
     }
 
-//    open fun navigateBundle(id: Int, bundle: Bundle?) {
-//        if (activity is MainActivity) {
-//            (activity as MainActivity).navController.navigate(id, bundle)
-//        }
-//    }
+    open fun navigateBundle(id: Int, bundle: Bundle?) {
+        if (activity is MainActivity) {
+            (activity as MainActivity).navController.navigate(id, bundle)
+        }
+    }
 
-//    open fun navigateFragment(id: Int) {
-//            (activity as MainActivity).navController.navigate(id)
-//    }
+    open fun navigateFragment(id: Int) {
+            (activity as MainActivity).navController.navigate(id)
+    }
 }

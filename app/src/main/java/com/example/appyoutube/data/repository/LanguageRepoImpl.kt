@@ -8,8 +8,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class LanguageRepoImpl @Inject constructor
-    (private val application: Application): LanguageRepo {
+class LanguageRepoImpl @Inject constructor(private val application: Application): LanguageRepo {
     override fun getAllLanguage(): Flow<List<Language>> {
         return flow {
             try {

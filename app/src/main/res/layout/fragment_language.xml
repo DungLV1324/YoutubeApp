@@ -55,7 +55,8 @@
             android:padding="@dimen/dimen_20dp"
             android:src="@drawable/ic_back_bk"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAccessibility="no" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rc_language"

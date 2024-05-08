@@ -19,6 +19,7 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding, MainVM>() {
     }
 
     override fun setupView(savedInstanceState: Bundle?) {
+
     }
 
     override fun setupData() {

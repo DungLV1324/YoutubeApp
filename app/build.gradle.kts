@@ -1,9 +1,8 @@
 plugins {
     id ("com.android.application")
     id ("kotlin-kapt")
-    id("com.google.dagger.hilt.android") version "2.44" apply false
+    id("com.google.dagger.hilt.android")
     id ("org.jetbrains.kotlin.android")
-//    id ("org.jetbrains.kotlin.android") version "1.8.20" apply false
 
 
 }
@@ -78,12 +77,6 @@ dependencies {
 //glide
     implementation ("com.github.bumptech.glide:glide:4.13.0")
 
-    kapt ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0")
 }
-kapt {
-    correctErrorTypes =true
-    javacOptions {
-        option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
-    }
-}
+
 

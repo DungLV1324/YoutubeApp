@@ -3,18 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragment_permission"
-    tools:ignore="InvalidNavigation,MissingDefaultResource">
+    app:startDestination="@id/fragment_language">
     <fragment
         android:id="@+id/fragment_language"
         android:label="FragmentLanguage"
         tools:layout="@layout/fragment_language"
         android:name="com.example.appyoutube.ui.language.LanguageFragment"
         />
+
     <fragment
         android:id="@+id/fragment_permission"
-        android:label="FragmentLanguage"
+        android:label="FragmentPermission"
         tools:layout="@layout/fragment_permission"
         android:name="com.example.appyoutube.ui.permission.PermissionFragment"
         />
+
 </navigation>

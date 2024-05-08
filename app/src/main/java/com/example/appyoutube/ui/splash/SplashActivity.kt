@@ -37,14 +37,6 @@ class SplashActivity : BaseBindingActivity<ActivitySplashBinding,MainVM>(){
         start()
     }
 
-    private fun startToPermission() {
-        runCatching {
-            Intent(this@SplashActivity,PermissionFragment::class.java).apply {
-                startActivity(this)
-            }
-        }.onFailure { it.printStackTrace() }
-    }
-
     private fun startToLanguage() {
         runCatching {
             Intent(this@SplashActivity,LanguageFragment::class.java).apply {
