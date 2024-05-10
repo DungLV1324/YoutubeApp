@@ -11,5 +11,7 @@
     <string name="india">     India</string>
     <string name="portuguese">Portuguese</string>
     <string name="spanish">   Spanish</string>
-    <string name="vietnam">   Việt Nam</string>
+    <string name="vietnam">   VietNam</string>
+    <string name="youtube">Youtube</string>
+    <string name="premium">Premium</string>
 </resources>

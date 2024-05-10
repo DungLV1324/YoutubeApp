@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Youtube</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="done">Xong</string>
+    <string name="permission">Sự cho phép</string>
+    <string name="notification">Thông báo</string>
+    <string name="audio">Âm thanh</string>
+    <string name="go">Đi</string>
+    <string name="english">   Tiếng Anh</string>
+    <string name="france">    Pháp</string>
+    <string name="india">Ấn Độ</string>
+    <string name="portuguese">Bồ Đào Nha</string>
+    <string name="spanish">Tây Ban Nha</string>
+    <string name="vietnam"> Việt Nam</string>
+</resources>

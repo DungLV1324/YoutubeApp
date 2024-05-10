@@ -9,7 +9,7 @@ import com.example.appyoutube.databinding.ItemLanguageBinding
 import com.example.appyoutube.ui.base.BaseBindingAdapter
 import com.example.appyoutube.utils.extention.setOnSafeClick
 
-class LanguageAdapter : BaseBindingAdapter<Language, ItemLanguageBinding>(
+class HomeAdapter : BaseBindingAdapter<Language, ItemLanguageBinding>(
     object : DiffUtil.ItemCallback<Language>() {
         override fun areItemsTheSame(oldItem: Language, newItem: Language): Boolean =
             oldItem.code == newItem.code

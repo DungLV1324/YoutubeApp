@@ -10,15 +10,23 @@ import com.example.appyoutube.ui.base.BaseBindingFragment
 import com.example.appyoutube.ui.base.observeWithCatch
 import com.example.appyoutube.ui.permission.PermissionFragment
 import com.example.appyoutube.utils.extention.setOnSafeClick
+import timber.log.Timber
 
 class LanguageFragment : BaseBindingFragment<FragmentLanguageBinding, LanguageVM>() {
+    private var currentLanguage = "en"
+    private var oldLanguage = "en"
     override fun getViewModel(): Class<LanguageVM> {
         return LanguageVM::class.java
     }
 
     private val languageAdapter: LanguageAdapter by lazy {
         LanguageAdapter().apply {
-
+            iClickItem = { language, pos ->
+                language.code?.let {
+                    viewModel.updateSelectOneView(pos)
+                    currentLanguage = language.code ?: currentLanguage
+                }
+            }
         }
     }
     override val layoutId: Int
@@ -36,15 +44,15 @@ class LanguageFragment : BaseBindingFragment<FragmentLanguageBinding, LanguageVM
         }
     }
 
-    private fun initData() {
-        viewModel.getAllLanguage()
-        viewModel.lisLanguageLiveDat.observeWithCatch(viewLifecycleOwner) {
-            languageAdapter.submitList(it)
-        }
+    private fun initAdapter() {
+        binding.rcLanguage.adapter = languageAdapter
     }
 
-    private fun initAdapter() {
-        binding.rcLanguage.adapter=languageAdapter
-
+    private fun initData() {
+        currentLanguage = oldLanguage
+        viewModel.getAllLanguage()
+        viewModel.lisLanguageLiveData.observeWithCatch(viewLifecycleOwner) {
+            languageAdapter.submitList(it)
+        }
     }
 }

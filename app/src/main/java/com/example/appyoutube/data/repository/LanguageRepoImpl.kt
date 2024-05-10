@@ -6,11 +6,13 @@ import com.example.appyoutube.data.model.Language
 import com.example.appyoutube.utils.LanguageUtils.getPreLanguage
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import timber.log.Timber
 import javax.inject.Inject
 
-class LanguageRepoImpl @Inject constructor(private val application: Application): LanguageRepo {
+class LanguageRepoImpl @Inject constructor(private val application: Application) : LanguageRepo {
     override fun getAllLanguage(): Flow<List<Language>> {
         return flow {
+
             try {
                 val listLanguage = mutableListOf<Language>()
                 val listName = listOf(
@@ -19,7 +21,7 @@ class LanguageRepoImpl @Inject constructor(private val application: Application)
                     R.string.india,
                     R.string.portuguese,
                     R.string.spanish,
-                    R.string.vietnam,
+                    R.string.vietnam
                 )
                 val listImage = listOf(
                     R.drawable.ic_nc_anh,
@@ -38,22 +40,23 @@ class LanguageRepoImpl @Inject constructor(private val application: Application)
                     "vi"
                 )
 
-                for (i in listName.indices) {
-                    listLanguage.add(
-                        Language(
-                            name = application.getString(listName[i]),
-                            code = listCodes[i],
-                            application.getDrawable(listImage[i])
-                        )
-                    )
+                for (i in listImage.indices) {
+                    Language(
+                        name = application.getString(listName[i]),
+                        code = listCodes[i],
+                        application.getDrawable(listImage[i])
+                    ).apply {
+                        listLanguage.add(this)
+//                        listLanguage.firstOrNull { it.code == getPreLanguage() }?.let {
+//                            it.isSelect = true
+//                        }
+                        emit(listLanguage)
+                    }
                 }
-                listLanguage.firstOrNull { it.code == getPreLanguage() }?.let {
-                    it.isSelect = true
-                }
-                emit(listLanguage)
             } catch (e: Exception) {
                 e.printStackTrace()
                 emit(mutableListOf())
+
             }
         }
     }

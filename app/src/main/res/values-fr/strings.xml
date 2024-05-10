@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Youtube</string>
+    <string name="language">Langue</string>
+    <string name="done">Fait</string>
+    <string name="permission">Autorisation</string>
+    <string name="notification">Notification</string>
+    <string name="audio">Audio</string>
+    <string name="go">Aller</string>
+    <string name="english">   Anglais</string>
+    <string name="france">    France</string>
+    <string name="india">     Inde</string>
+    <string name="portuguese">Portugais</string>
+    <string name="spanish">   Espagnol</string>
+    <string name="vietnam">   Vietnam</string>
+</resources>

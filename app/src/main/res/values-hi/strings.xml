@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Youtube</string>
+    <string name="language">भाषा</string>
+    <string name="done">हो गया</string>
+    <string name="permission">अनुमति</string>
+    <string name="notification">अधिसूचना</string>
+    <string name="audio">ऑडियो</string>
+    <string name="go">जाना</string>
+    <string name="english">   अंग्रेज़ी</string>
+    <string name="france">    फ्रांस</string>
+    <string name="india">     भारत</string>
+    <string name="portuguese">पुर्तगाली</string>
+    <string name="spanish">   स्पैनिश</string>
+    <string name="vietnam">   वियतनाम</string>
+</resources>

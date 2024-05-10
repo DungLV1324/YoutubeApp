@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#80000000">
+
+        <ImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_margin="@dimen/_5sdp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avt"
+            app:layout_constraintDimensionRatio="2:1.3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cr_user"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            app:layout_constraintBottom_toBottomOf="c"
+            android:src="@drawable/ic_user"
+            app:layout_constraintDimensionRatio="1:1.5"
+            app:layout_constraintLeft_toLeftOf="@id/img_avatar"
+            app:layout_constraintTop_toBottomOf="@id/img_avatar" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:text="(Farm Together 2) Mở lại trang trại cùng vợ iu và ae RF, ai ngờ gặp ngay nông dân Nhism tham vọng."
+            android:maxLines="2"
+            app:layout_constraintLeft_toRightOf="@id/cr_user"
+            app:layout_constraintRight_toRightOf="@id/img_avatar"
+            app:layout_constraintTop_toTopOf="@id/cr_user" />
+
+        <TextView
+            android:id="@+id/tv_channel_name"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Mixigaming"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_view"
+            app:layout_constraintLeft_toRightOf="@id/cr_user"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_view"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="1 triệu lượt xem"
+            app:layout_constraintRight_toLeftOf="@id/tv_time"
+            app:layout_constraintLeft_toRightOf="@id/tv_channel_name"
+            app:layout_constraintTop_toTopOf="@id/tv_channel_name" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="1 giờ trước"
+            app:layout_constraintLeft_toRightOf="@id/tv_view"
+            app:layout_constraintRight_toRightOf="@id/img_avatar"
+            app:layout_constraintTop_toTopOf="@id/tv_channel_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

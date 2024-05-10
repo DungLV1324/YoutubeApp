@@ -49,7 +49,7 @@
             android:id="@+id/im_select"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
             android:src="@drawable/ic_task"
             app:layout_constraintBottom_toBottomOf="@id/tv_language"
             app:layout_constraintRight_toRightOf="@id/tv_language"
